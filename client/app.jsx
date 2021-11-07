@@ -19,7 +19,7 @@ export default class App extends React.Component {
           <Route path='/inspiration' element={<Inspiration/>}/>
           <Route path='/sketchbook' element={<Sketchbook/>}/>
           <Route path='*' element={<PageNotFound/>}/>
-        </Routes>;
+        </Routes>
       </Router>
     );
   }

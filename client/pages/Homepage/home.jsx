@@ -1,12 +1,11 @@
 import React from 'react';
 // import { NavLink } from 'react-router-dom';
-import { SubNav } from '../../components/subnav';
+import { Header } from '../../components/header';
 
 export default function Home(props) {
   return (
     <>
-    <SubNav/>
-    Home
+      <Header />
     </>
   );
 }

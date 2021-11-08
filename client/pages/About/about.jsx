@@ -15,18 +15,18 @@ export default class About extends React.Component {
             <p>
               Forged in the classroom of a teacher who wanted to provide
               entertainment and relief for weary students who had just finished
-              taking a test, `&#34;`Bears Doing Stuff`&#34;` is a website
-              designed to cultivate joy, provide rest, and share delight through
-              the act of drawing bears doing stuff!
+              taking a test, &#34;Bears Doing Stuff&#34; is a website designed
+              to cultivate joy, provide rest, and share delight through the act
+              of drawing bears doing stuff!
             </p>
             <p>
-              Click `&#34;`Draw your bear`&#34;` and a randomly generated prompt
+              Click &#34;Draw your bear&#34; and a randomly generated prompt
               will appear in your online sketchbook!
             </p>
             <p>Have fun!</p>
           </div>
           <div>
-            <img className="about-page-photo" src="./classroom.jpeg" />
+            <img className="about-page-photo" src="/images/classroom.jpeg" />
           </div>
         </div>
       </>

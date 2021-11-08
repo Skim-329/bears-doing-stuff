@@ -1,0 +1,36 @@
+.inspiration-image-wrapper {
+  margin: 45px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inspiration-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  height: 50px;
+  width: 218px;
+  border: 2px solid #ad2424;
+  background-color: white;
+  border-radius: 25px;
+  font-family: "Zilla Slab", serif;
+  font-size: 150%;
+}
+
+.inspiration-button-text {
+  color: #ad2424;
+  text-decoration: none;
+}
+
+.inspiration-button:hover {
+  cursor: pointer;
+}
+
+.inspiration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

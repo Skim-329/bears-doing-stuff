@@ -1,0 +1,30 @@
+.about-page-text {
+  font-family: "Zilla Slab", serif;
+  font-size: xxx-large;
+  color: #ad2424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-page-group {
+  display: flex;
+  flex-wrap: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.about-page-description {
+  font-family: "Zilla Slab", serif;
+  font-size: xx-large;
+  font-weight: lighter;
+  color: #6c6c6c;
+  padding-right: 50px;
+}
+
+.about-page-photo {
+  width: 400px;
+  height: 400px;
+}

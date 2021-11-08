@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header } from '../../components/header';
+import './styles.css';
 // import axios from "axios";
 
 const BEARS_URL = 'https://placebear.com';
@@ -63,7 +64,6 @@ export default class Inspiration extends React.Component {
     return (
       <>
         <Header />
-        <img src={this.state.image} />
         <img src={`data:image/jpeg;base64,${this.state.image}`} />
       </>
     );

@@ -19,6 +19,14 @@
   margin-right: 45px;
 }
 
+.subnav-group-links {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
 .subnav-group-button {
   display: flex;
   flex-direction: row;
@@ -31,14 +39,16 @@
   background-color: white;
   border-radius: 25px;
   font-family: "Zilla Slab", serif;
-  font-size: 130%;
+  font-size: 150%;
 }
 
 .subnav-group-item {
   padding-right: 29px;
+  padding-top: 50px;
   font-weight: lighter;
   color: #ad2424;
   text-decoration: none;
+  font-size: 150%;
 }
 
 .subnav-group-button-text {

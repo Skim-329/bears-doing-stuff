@@ -14,11 +14,11 @@ export default class App extends React.Component {
     return (
       <Router>
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='/inspiration' element={<Inspiration/>}/>
-          <Route path='/sketchbook' element={<Sketchbook/>}/>
-          <Route path='*' element={<PageNotFound/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/inspiration" element={<Inspiration />} />
+          <Route path="/sketchbook" element={<Sketchbook />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
     );

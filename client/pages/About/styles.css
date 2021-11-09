@@ -33,18 +33,21 @@
 .about-page-photo {
   height: 25rem;
   width: 25rem;
+  margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .about-page-description {
     width: 100%;
-    margin-left: 0.25rem;
+    margin: 0 auto;
     max-height: 500px;
-    font-size: 1.25rem;
+    font-size: 1.55rem;
+    text-align: justify;
   }
 
   .about-page-photo {
     margin-top: 20px;
+    margin-bottom: 20px;
     width: 17rem;
     height: 17rem;
   }

@@ -4,7 +4,7 @@
 
 .about-page-text {
   font-family: "Zilla Slab", serif;
-  font-size: xxx-large;
+  font-size: 3rem;
   color: #ad2424;
   display: flex;
   justify-content: center;
@@ -22,7 +22,7 @@
 
 .about-page-description {
   font-family: "Zilla Slab", serif;
-  font-size: xx-large;
+  font-size: 2rem;
   font-weight: lighter;
   color: #6c6c6c;
   padding-right: 50px;
@@ -31,18 +31,21 @@
 }
 
 .about-page-photo {
-  height: 400px;
-  width: 400px;
+  height: 25rem;
+  width: 25rem;
 }
 
 @media only screen and (max-width: 600px) {
   .about-page-description {
     width: 100%;
+    margin-left: 0.25rem;
     max-height: 500px;
+    font-size: 1.25rem;
   }
 
   .about-page-photo {
     margin-top: 20px;
-    width: 100%;
+    width: 17rem;
+    height: 17rem;
   }
 }

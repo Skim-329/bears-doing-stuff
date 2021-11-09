@@ -38,6 +38,22 @@ export class Carousel extends React.Component {
     });
   }
 
+  currentDot(id) {
+    let dotClassName;
+    if (this.state.currentIndex === id) {
+      dotClassName = 'dot-red';
+    } else {
+      dotClassName = 'dot';
+    }
+    return dotClassName;
+  }
+
+  currentSlide(event, id) {
+    this.setState({
+      currentIndex: id
+    });
+  }
+
   render() {
     return (
       <>
@@ -57,11 +73,26 @@ export class Carousel extends React.Component {
           </div>
         </div>
         <div className="carousel-dots-container">
-          <span className="dot" onClick="currentSlide(1)"></span>
-          <span className="dot" onClick="currentSlide(2)"></span>
-          <span className="dot" onClick="currentSlide(3)"></span>
-          <span className="dot" onClick="currentSlide(4)"></span>
-          <span className="dot" onClick="currentSlide(5)"></span>
+          <span
+            className={this.currentDot(0)}
+            onClick={e => this.currentSlide(e, 0)}
+          ></span>
+          <span
+            className={this.currentDot(1)}
+            onClick={e => this.currentSlide(e, 1)}
+          ></span>
+          <span
+            className={this.currentDot(2)}
+            onClick={e => this.currentSlide(e, 2)}
+          ></span>
+          <span
+            className={this.currentDot(3)}
+            onClick={e => this.currentSlide(e, 3)}
+          ></span>
+          <span
+            className={this.currentDot(4)}
+            onClick={e => this.currentSlide(e, 4)}
+          ></span>
         </div>
       </>
     );

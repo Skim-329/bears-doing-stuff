@@ -15,6 +15,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        use: [
+          { loader: 'file-loader' }
+        ]
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader']
+      },
+      {
         test: /\.jsx?$/,
         include: clientPath,
         use: {
@@ -38,7 +48,7 @@ module.exports = {
       watch: true
     },
     proxy: {
-      '/api': `http://localhost:${process.env.PORT}`
+      '/': `http://localhost:${process.env.PORT}`
     }
   },
   stats: 'summary',

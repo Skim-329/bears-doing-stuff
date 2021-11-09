@@ -1,0 +1,41 @@
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.carousel-button {
+  border: none;
+  color: #ad2424;
+}
+
+.carousel-button:hover {
+  cursor: pointer;
+}
+
+.carousel-button > i {
+  font-size: 3rem;
+}
+
+.carousel-dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 22px;
+  width: 22px;
+  margin: 0 9px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+  background-color: #ad2424;
+}

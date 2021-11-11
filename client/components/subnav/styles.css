@@ -50,9 +50,15 @@
 
 .subnav-group-item:hover {
   color: black;
+  text-decoration: none;
 }
 
 .subnav-group-button-text {
   color: #ad2424;
   text-decoration: none;
+}
+
+.subnav-group-button-text:hover {
+  text-decoration: none;
+  color: black;
 }

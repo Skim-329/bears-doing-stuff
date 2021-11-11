@@ -35,4 +35,59 @@ h1 {
   align-items: center;
   justify-content: center;
   width: calc(100vw - 60px);
+  height: 100%;
+}
+
+.sketchbook-pen {
+  color: white;
+  padding: 10px;
+}
+
+.sketchbook-pen:hover {
+  cursor: pointer;
+  color: #d99d9d;
+}
+
+.sketchbook-eraser {
+  color: white;
+  padding: 10px;
+}
+
+.sketchbook-eraser:hover {
+  cursor: pointer;
+  color: #d99d9d;
+}
+
+.drawer {
+  background-color: #d99d9d;
+  border-radius: 0%;
+  padding-left: 10px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 800;
+}
+
+.pen-option-thin:hover {
+  color: white;
+}
+
+.pen-option-regular:hover {
+  color: white;
+}
+
+.pen-option-thick:hover {
+  color: white;
+}
+
+.dropright .dropdown-toggle::after {
+  display: none;
+}
+
+#sketchbook-text-area {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+  resize: horizontal;
 }

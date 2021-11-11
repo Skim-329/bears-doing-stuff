@@ -66,13 +66,13 @@ export function EraserOptions(props) {
         </svg>
       </div>
       <div className="dropdown-menu drawer">
-        <div className="pen-option-thin" onClick={props.selectRadius} id="1">
+        <div className="pen-option-thin" onClick={props.selectColor} id="1">
           Thin
         </div>
-        <div className="pen-option-regular" onClick={props.selectRadius} id="2">
+        <div className="pen-option-regular" onClick={props.selectColor} id="2">
           Regular
         </div>
-        <div className="pen-option-thick" onClick={props.selectRadius} id="3">
+        <div className="pen-option-thick" onClick={props.selectColor} id="3">
           Thick
         </div>
       </div>

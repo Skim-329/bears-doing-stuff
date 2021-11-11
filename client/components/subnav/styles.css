@@ -40,6 +40,10 @@
   font-size: 150%;
 }
 
+.subnav-group-button:hover {
+  border-color: black;
+}
+
 .subnav-group-item {
   padding-right: 29px;
   padding-top: 50px;

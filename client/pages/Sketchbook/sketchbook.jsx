@@ -17,7 +17,7 @@ export default class Sketchbook extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pen: { brushRadius: 1 },
+      pen: { brushRadius: 1, color: '#000000' },
       prompts: [
         'Draw a bear drinking tea.',
         'Draw a bear riding a bicycle.',
@@ -37,6 +37,7 @@ export default class Sketchbook extends React.Component {
       ]
     };
     this.handleSelectBrushRadius = this.handleSelectBrushRadius.bind(this);
+    this.handleSelectEraserRadius = this.handleSelectEraserRadius.bind(this);
   }
 
   componentDidMount() {
@@ -50,14 +51,24 @@ export default class Sketchbook extends React.Component {
     const radius = Number(event.target.id);
     this.setState({
       pen: {
-        brushRadius: radius
+        brushRadius: radius,
+        color: '#000000'
+      }
+    });
+  }
+
+  handleSelectEraserRadius(event) {
+    const radius = Number(event.target.id);
+    this.setState({
+      pen: {
+        brushRadius: radius,
+        color: '#ffffff'
       }
     });
   }
 
   render() {
     const { pen, randomIndex, prompts } = this.state;
-    // renderText();
     return (
       <div className="sketchbook-content">
         <header className="sketchbook-header">
@@ -72,7 +83,7 @@ export default class Sketchbook extends React.Component {
               <DrawerOptions selectRadius={this.handleSelectBrushRadius} />
             </div>
             <div className="sketchbook-eraser">
-              <EraserOptions selectRadius={this.handleSelectBrushRadius} />
+              <EraserOptions selectColor={this.handleSelectEraserRadius} />
             </div>
           </div>
           <textarea id="sketchbook-text-area" />
@@ -82,6 +93,7 @@ export default class Sketchbook extends React.Component {
               canvasWidth={900}
               canvasHeight={600}
               brushRadius={pen.brushRadius}
+              brushColor={pen.color}
               hideGrid={true}
             />
           </div>

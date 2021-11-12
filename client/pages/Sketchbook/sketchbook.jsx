@@ -85,6 +85,9 @@ export default class Sketchbook extends React.Component {
             <div className="sketchbook-eraser">
               <EraserOptions selectColor={this.handleSelectEraserRadius} />
             </div>
+            {/* <div className="sketchbook-undo">
+              <undo />
+            </div> */}
           </div>
           <textarea id="sketchbook-text-area" />
           <div className="sketchbook-canvas">

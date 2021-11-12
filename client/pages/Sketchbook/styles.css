@@ -58,6 +58,11 @@ h1 {
   color: #d99d9d;
 }
 
+.sketchbook-undo {
+  color: white;
+  padding: 10px;
+}
+
 .drawer {
   background-color: #d99d9d;
   border-radius: 0%;
@@ -91,3 +96,12 @@ h1 {
   z-index: 1;
   resize: horizontal;
 }
+
+/* @media only screen and (max-width: 700px) {
+  .sketchbook-canvas {
+    width: 500px !important;
+    position: absolute;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+} */

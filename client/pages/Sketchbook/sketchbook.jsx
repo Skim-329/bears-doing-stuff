@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BearLogo } from '../../components/header/bearlogo';
 import CanvasDraw from 'react-canvas-draw';
-import { DrawerOptions, EraserOptions } from './drawing-options';
+import { DrawerOptions, EraserOptions, Undo } from './drawing-options';
 import './styles.css';
 
 function renderText() {
@@ -38,6 +38,7 @@ export default class Sketchbook extends React.Component {
     };
     this.handleSelectBrushRadius = this.handleSelectBrushRadius.bind(this);
     this.handleSelectEraserRadius = this.handleSelectEraserRadius.bind(this);
+    this.handleUndo = this.handleUndo.bind(this);
   }
 
   componentDidMount() {
@@ -67,6 +68,8 @@ export default class Sketchbook extends React.Component {
     });
   }
 
+  handleUndo(event) {}
+
   render() {
     const { pen, randomIndex, prompts } = this.state;
     return (
@@ -85,9 +88,9 @@ export default class Sketchbook extends React.Component {
             <div className="sketchbook-eraser">
               <EraserOptions selectColor={this.handleSelectEraserRadius} />
             </div>
-            {/* <div className="sketchbook-undo">
-              <undo />
-            </div> */}
+            <div className="sketchbook-undo">
+              <Undo />
+            </div>
           </div>
           <textarea id="sketchbook-text-area" />
           <div className="sketchbook-canvas">

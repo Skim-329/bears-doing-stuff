@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .about-page-group {
@@ -27,7 +28,6 @@
   color: #6c6c6c;
   padding-right: 50px;
   width: 66%;
-  margin-bottom: 30px;
 }
 
 .about-page-photo {
@@ -46,7 +46,7 @@
   }
 
   .about-page-photo {
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 20px;
     width: 17rem;
     height: 17rem;

@@ -5,13 +5,13 @@ import CanvasDraw from 'react-canvas-draw';
 import { DrawerOptions, EraserOptions, Undo } from './drawing-options';
 import './styles.css';
 
-function renderText() {
-  const ctx = document.getElementsByTagName('canvas')[0].getContext('2d');
-  ctx.fillStyle = 'red';
-  ctx.strokeStyle = 'black';
-  ctx.font = '48px serif';
-  ctx.fillText('Hello world', 100, 150);
-}
+// function renderText() {
+//   const ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
+//   ctx.fillStyle = "red";
+//   ctx.strokeStyle = "black";
+//   ctx.font = "48px serif";
+//   ctx.fillText("Hello world", 100, 150);
+// }
 
 export default class Sketchbook extends React.Component {
   constructor(props) {
@@ -42,7 +42,7 @@ export default class Sketchbook extends React.Component {
   }
 
   componentDidMount() {
-    renderText();
+    // renderText();
     this.setState(prevState => ({
       randomIndex: Math.floor(Math.random() * prevState.prompts.length)
     }));
@@ -89,10 +89,10 @@ export default class Sketchbook extends React.Component {
               <EraserOptions selectColor={this.handleSelectEraserRadius} />
             </div>
             <div className="sketchbook-undo">
-              <Undo />
+              <Undo onClick={this.handleUndo} />
             </div>
           </div>
-          <textarea id="sketchbook-text-area" />
+          {/* <textarea id="sketchbook-text-area" /> */}
           <div className="sketchbook-canvas">
             <CanvasDraw
               lazyRadius={0}

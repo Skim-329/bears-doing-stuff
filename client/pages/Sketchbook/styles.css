@@ -63,6 +63,11 @@ h1 {
   padding: 10px;
 }
 
+.sketchbook-undo:hover {
+  cursor: pointer;
+  color: #d99d9d;
+}
+
 .drawer {
   background-color: #d99d9d;
   border-radius: 0%;

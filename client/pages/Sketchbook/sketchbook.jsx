@@ -14,7 +14,6 @@ export default class Sketchbook extends React.Component {
     };
     this.handleUpdateBrush = this.handleUpdateBrush.bind(this);
     this.handleUpdateEraser = this.handleUpdateEraser.bind(this);
-    this.handleUndo = this.handleUndo.bind(this);
   }
 
   componentDidMount() {

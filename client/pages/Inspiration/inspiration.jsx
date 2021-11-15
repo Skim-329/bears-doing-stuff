@@ -19,7 +19,7 @@ export default class Inspiration extends React.Component {
         'https://pyxis.nymag.com/v1/imgs/9a8/4f0/334fd7affff0c7beb9d092351bfcc7eac0-GettyImages-1271918348.rvertical.w1200.jpg',
         'https://www.alaskawildlife.org/wp-content/uploads/2016/12/JB-napping-on-a-log-Photo-by-Nicole-Geils-Resized-for-Web-1024x679.jpg',
         'https://static01.nyt.com/images/2021/11/04/opinion/04appelbaum1/04appelbaum1-articleLarge.jpg?quality=75&auto=webp&disable=upscale',
-        'https://lh3.googleusercontent.com/proxy/e-VnPE1hd5XZirG6N-Myeaj__huhQEuPMrz9-WQEOrp3IXWyrqUdo961zIySM6Ajpn6wqUoR5VD6MjYKa9CZTYsvLDF_JFo5DfNKWzmEoZTKsXTxRiVq2x4'
+        'https://bloximages.chicago2.vip.townnews.com/azdailysun.com/content/tncms/assets/v3/editorial/0/64/064d7a93-b4da-54fd-b31e-1cbac9e97961/605f76a63074f.image.jpg?crop=1662%2C1247%2C0%2C0&resize=1662%2C1247&order=crop%2Cresize'
       ]
     };
     this.handleInspire = this.handleInspire.bind(this);

@@ -1,5 +1,6 @@
 require('dotenv/config');
 const express = require('express');
+const db = require('./db');
 const errorMiddleware = require('./error-middleware');
 const staticMiddleware = require('./static-middleware');
 const path = require('path');
@@ -11,6 +12,25 @@ app.use((req, res, next) => {
   next();
 });
 app.use(staticMiddleware);
+app.get('/api/bearPhotos', (req, res, next) => {
+  const sql = `
+    select "imageUrl"
+      from "bearPhotos"
+  `;
+  db.query(sql)
+    .then(result => res.json(result.rows))
+    .catch(err => next(err));
+});
+
+app.get('/api/bearPrompts', (req, res, next) => {
+  const sql = `
+    select "prompt"
+      from "bearPrompts"
+  `;
+  db.query(sql)
+    .then(result => res.json(result.rows))
+    .catch(err => next(err));
+});
 app.get('*', (req, res) => {
   const pathToIndex = path.join(__dirname, 'public', 'index.html');
   res.sendFile(pathToIndex);

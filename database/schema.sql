@@ -5,3 +5,9 @@ set client_min_messages to warning;
 drop schema "public" cascade;
 
 create schema "public";
+
+create table "public"."bearPrompts" (
+  "id"        serial,
+  "prompt"    text    not null,
+  primary key ("id")
+)

@@ -2,53 +2,36 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BearLogo } from '../../components/header/bearlogo';
 import CanvasDraw from 'react-canvas-draw';
-import { DrawerOptions, EraserOptions, Undo } from './drawing-options';
+import { BrushOptions, EraserOptions } from './drawing-options';
 import './styles.css';
-
-// function renderText() {
-//   const ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
-//   ctx.fillStyle = "red";
-//   ctx.strokeStyle = "black";
-//   ctx.font = "48px serif";
-//   ctx.fillText("Hello world", 100, 150);
-// }
 
 export default class Sketchbook extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       pen: { brushRadius: 1, color: '#000000' },
-      prompts: [
-        'Draw a bear drinking tea.',
-        'Draw a bear riding a bicycle.',
-        'Draw a bear trying on shoes.',
-        'Draw a bear jumping on a trampoline.',
-        'Draw a bear juggling.',
-        'Draw a bear playing basketball.',
-        'Draw a bear preventing forest fires.',
-        'Draw a bear attending Learning Fuze.',
-        'Draw a bear reading a book.',
-        'Draw a bear eating sushi.',
-        'Draw a bear driving a car.',
-        'Draw a bear eating watermelons.',
-        'Draw a bear on vacation.',
-        'Draw a bear doing the laundry.',
-        'Draw a bear buying groceries.'
-      ]
+      prompts: []
     };
-    this.handleSelectBrushRadius = this.handleSelectBrushRadius.bind(this);
-    this.handleSelectEraserRadius = this.handleSelectEraserRadius.bind(this);
+    this.handleUpdateBrush = this.handleUpdateBrush.bind(this);
+    this.handleUpdateEraser = this.handleUpdateEraser.bind(this);
     this.handleUndo = this.handleUndo.bind(this);
   }
 
   componentDidMount() {
-    // renderText();
-    this.setState(prevState => ({
-      randomIndex: Math.floor(Math.random() * prevState.prompts.length)
-    }));
+    fetch('/api/bearPrompts')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          prompts: data
+        });
+
+        this.setState(prevState => ({
+          randomIndex: Math.floor(Math.random() * prevState.prompts.length)
+        }));
+      });
   }
 
-  handleSelectBrushRadius(event) {
+  handleUpdateBrush(event) {
     const radius = Number(event.target.id);
     this.setState({
       pen: {
@@ -58,7 +41,7 @@ export default class Sketchbook extends React.Component {
     });
   }
 
-  handleSelectEraserRadius(event) {
+  handleUpdateEraser(event) {
     const radius = Number(event.target.id);
     this.setState({
       pen: {
@@ -68,8 +51,6 @@ export default class Sketchbook extends React.Component {
     });
   }
 
-  handleUndo(event) {}
-
   render() {
     const { pen, randomIndex, prompts } = this.state;
     return (
@@ -78,21 +59,21 @@ export default class Sketchbook extends React.Component {
           <NavLink to="/">
             <BearLogo />
           </NavLink>
-          <h1>{prompts[randomIndex]}</h1>
+          <h1>
+            {prompts[randomIndex] === undefined
+              ? ''
+              : prompts[randomIndex].prompt}
+          </h1>
         </header>
         <div>
           <div className="sketchbook-sidebar">
             <div className="sketchbook-pen">
-              <DrawerOptions selectRadius={this.handleSelectBrushRadius} />
+              <BrushOptions updateBrush={this.handleUpdateBrush} />
             </div>
             <div className="sketchbook-eraser">
-              <EraserOptions selectColor={this.handleSelectEraserRadius} />
-            </div>
-            <div className="sketchbook-undo">
-              <Undo onClick={this.handleUndo} />
+              <EraserOptions updateEraser={this.handleUpdateEraser} />
             </div>
           </div>
-          {/* <textarea id="sketchbook-text-area" /> */}
           <div className="sketchbook-canvas">
             <CanvasDraw
               lazyRadius={0}

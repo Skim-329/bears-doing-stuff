@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function DrawerOptions(props) {
+export function BrushOptions(props) {
   return (
     <div className="dropright">
       <div
@@ -26,13 +26,13 @@ export function DrawerOptions(props) {
         </svg>
       </div>
       <div className="dropdown-menu drawer">
-        <div className="pen-option-thin" onClick={props.selectRadius} id="1">
+        <div className="pen-option-thin" onClick={props.updateBrush} id="1">
           Thin
         </div>
-        <div className="pen-option-regular" onClick={props.selectRadius} id="3">
+        <div className="pen-option-regular" onClick={props.updateBrush} id="3">
           Regular
         </div>
-        <div className="pen-option-thick" onClick={props.selectRadius} id="6">
+        <div className="pen-option-thick" onClick={props.updateBrush} id="6">
           Thick
         </div>
       </div>
@@ -66,13 +66,13 @@ export function EraserOptions(props) {
         </svg>
       </div>
       <div className="dropdown-menu drawer">
-        <div className="pen-option-thin" onClick={props.selectColor} id="1">
+        <div className="pen-option-thin" onClick={props.updateEraser} id="1">
           Thin
         </div>
-        <div className="pen-option-regular" onClick={props.selectColor} id="3">
+        <div className="pen-option-regular" onClick={props.updateEraser} id="3">
           Regular
         </div>
-        <div className="pen-option-thick" onClick={props.selectColor} id="6">
+        <div className="pen-option-thick" onClick={props.updateEraser} id="6">
           Thick
         </div>
       </div>

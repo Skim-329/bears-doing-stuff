@@ -1,6 +1,6 @@
-import React from "react";
-import { Header } from "../../components/header";
-import "./styles.css";
+import React from 'react';
+import { Header } from '../../components/header';
+import './styles.css';
 
 export default class About extends React.Component {
   render() {
@@ -27,7 +27,10 @@ export default class About extends React.Component {
               <p>Have fun!</p>
             </div>
             <div>
-              <img className="about-page-photo" src="/images/classroom.jpeg" />
+              <img
+                className="about-page-photo"
+                src="https://27mi124bz6zg1hqy6n192jkb-wpengine.netdna-ssl.com/wp-content/uploads/2020/05/Classroom-Management-for-an-Effective-Learning-Environment-scaled.jpg"
+              />
             </div>
           </div>
         </div>

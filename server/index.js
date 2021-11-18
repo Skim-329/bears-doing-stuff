@@ -36,6 +36,14 @@ app.get('*', (req, res) => {
   res.sendFile(pathToIndex);
 });
 
+app.use((req, res) => {
+  res.sendFile('/index.html', {
+    // you'll need to require the built-in path module
+    // into your server code if you haven't already
+    root: path.join(__dirname, 'public')
+  });
+});
+
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {

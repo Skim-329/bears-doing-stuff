@@ -1,7 +1,5 @@
 .subnav {
   width: 100vw;
-
-  /* position: fixed; */
   top: 0;
   left: 0;
   height: 100px;
@@ -42,16 +40,29 @@
   font-size: 150%;
 }
 
+.subnav-group-button:hover {
+  border-color: black;
+}
+
 .subnav-group-item {
   padding-right: 29px;
   padding-top: 50px;
   font-weight: lighter;
   color: #ad2424;
-  text-decoration: none;
   font-size: 150%;
+}
+
+.subnav-group-item:hover {
+  color: black;
+  text-decoration: none;
 }
 
 .subnav-group-button-text {
   color: #ad2424;
   text-decoration: none;
+}
+
+.subnav-group-button-text:hover {
+  text-decoration: none;
+  color: black;
 }

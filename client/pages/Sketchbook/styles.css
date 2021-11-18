@@ -1,0 +1,112 @@
+.sketchbook-header {
+  display: flex;
+  padding-top: 15px;
+  padding-left: 15px;
+  background-color: white;
+  position: relative;
+  z-index: 1000;
+}
+
+.sketchbook-content {
+  background-color: #e5e5e5;
+  min-height: 100vh;
+}
+
+.sketchbook-content > div {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 150px);
+}
+
+h1 {
+  font-family: "Zilla Slab", serif;
+  color: #ad2424;
+  margin-left: 30px;
+}
+
+.sketchbook-sidebar {
+  width: 60px;
+  height: 100vh;
+  background-color: #ad2424;
+}
+
+.sketchbook-canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100vw - 60px);
+  height: 100%;
+}
+
+.sketchbook-pen {
+  color: white;
+  padding: 10px;
+}
+
+.sketchbook-pen:hover {
+  cursor: pointer;
+  color: #d99d9d;
+}
+
+.sketchbook-eraser {
+  color: white;
+  padding: 10px;
+}
+
+.sketchbook-eraser:hover {
+  cursor: pointer;
+  color: #d99d9d;
+}
+
+.sketchbook-undo {
+  color: white;
+  padding: 10px;
+}
+
+.sketchbook-undo:hover {
+  cursor: pointer;
+  color: #d99d9d;
+}
+
+.drawer {
+  background-color: #d99d9d;
+  border-radius: 0%;
+  padding-left: 10px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 800;
+}
+
+.pen-option-thin:hover {
+  color: white;
+}
+
+.pen-option-regular:hover {
+  color: white;
+}
+
+.pen-option-thick:hover {
+  color: white;
+}
+
+.dropright .dropdown-toggle::after {
+  display: none;
+}
+
+#sketchbook-text-area {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+  resize: horizontal;
+}
+
+/* @media only screen and (max-width: 700px) {
+  .sketchbook-canvas {
+    width: 500px !important;
+    position: absolute;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+} */

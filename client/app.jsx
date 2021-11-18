@@ -3,7 +3,7 @@ import Home from './pages/Homepage/home';
 import About from './pages/About/about';
 import Inspiration from './pages/Inspiration/inspiration';
 import Sketchbook from './pages/Sketchbook/sketchbook';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function PageNotFound() {
   return <div>Page Not Found</div>;

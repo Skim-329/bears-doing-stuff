@@ -58,12 +58,12 @@ h1 {
   color: #d99d9d;
 }
 
-.sketchbook-undo {
+.sketchbook-prompt {
   color: white;
   padding: 10px;
 }
 
-.sketchbook-undo:hover {
+.sketchbook-prompt:hover {
   cursor: pointer;
   color: #d99d9d;
 }

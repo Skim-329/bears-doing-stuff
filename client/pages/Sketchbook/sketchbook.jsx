@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BearLogo } from '../../components/header/bearlogo';
 import CanvasDraw from 'react-canvas-draw';
-import { BrushOptions, EraserOptions } from './drawing-options';
+import { BrushOptions, EraserOptions, PromptOptions } from './drawing-options';
 import './styles.css';
 
 export default class Sketchbook extends React.Component {
@@ -14,6 +14,7 @@ export default class Sketchbook extends React.Component {
     };
     this.handleUpdateBrush = this.handleUpdateBrush.bind(this);
     this.handleUpdateEraser = this.handleUpdateEraser.bind(this);
+    this.handleUpdatePrompt = this.handleUpdatePrompt.bind(this);
   }
 
   componentDidMount() {
@@ -50,6 +51,12 @@ export default class Sketchbook extends React.Component {
     });
   }
 
+  handleUpdatePrompt(event) {
+    this.setState(prevState => ({
+      randomIndex: event.target.id - 1
+    }));
+  }
+
   render() {
     const { pen, randomIndex, prompts } = this.state;
     return (
@@ -71,6 +78,9 @@ export default class Sketchbook extends React.Component {
             </div>
             <div className="sketchbook-eraser">
               <EraserOptions updateEraser={this.handleUpdateEraser} />
+            </div>
+            <div className="sketchbook-prompt">
+              <PromptOptions updatePrompt={this.handleUpdatePrompt} />
             </div>
           </div>
           <div className="sketchbook-canvas">

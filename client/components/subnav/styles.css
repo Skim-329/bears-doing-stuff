@@ -66,3 +66,15 @@
   text-decoration: none;
   color: black;
 }
+
+@media only screen and (max-width: 768px) {
+  .subnav-group-links {
+    font-size: 0.75rem;
+  }
+
+  .subnav-group-button {
+    font-size: 1.1rem;
+    height: 40px;
+    width: 150px;
+  }
+}

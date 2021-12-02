@@ -36,19 +36,20 @@
   margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   .about-page-description {
     width: 100%;
-    margin: 0 auto;
-    max-height: 500px;
-    font-size: 1.55rem;
+    padding-right: 0;
     text-align: justify;
+    font-size: 1.25rem;
   }
 
   .about-page-photo {
+    width: 90%;
+    height: 90%;
+    display: block;
     margin-top: 40px;
-    margin-bottom: 20px;
-    width: 17rem;
-    height: 17rem;
+    margin-bottom: 60px;
+    margin-left: auto;
   }
 }

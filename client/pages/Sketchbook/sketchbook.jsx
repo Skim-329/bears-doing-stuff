@@ -24,12 +24,12 @@ export default class Sketchbook extends React.Component {
       .then(res => res.json())
       .then(data => {
         this.setState({
-          prompts: data,
-          loading: false
+          prompts: data
         });
 
         this.setState(prevState => ({
-          randomIndex: Math.floor(Math.random() * prevState.prompts.length)
+          randomIndex: Math.floor(Math.random() * prevState.prompts.length),
+          loading: false
         }));
       });
   }
@@ -62,7 +62,6 @@ export default class Sketchbook extends React.Component {
 
   render() {
     const { pen, randomIndex, prompts } = this.state;
-    if (this.state.loading) return <Spinner />;
     return (
       <div className="sketchbook-content">
         <header className="sketchbook-header">
@@ -70,9 +69,7 @@ export default class Sketchbook extends React.Component {
             <BearLogo />
           </NavLink>
           <h1>
-            {prompts[randomIndex] === undefined
-              ? ''
-              : prompts[randomIndex].prompt}
+            {this.state.loading ? <Spinner /> : prompts[randomIndex].prompt}
           </h1>
         </header>
         <div>

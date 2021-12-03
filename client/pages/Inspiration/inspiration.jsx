@@ -36,6 +36,7 @@ export default class Inspiration extends React.Component {
   }
 
   fetchBearsDoingStuff() {
+    this.setState({ loading: true });
     this.getRandomNumber();
     this.setState(prevState => ({
       image: prevState.bearPhotos[prevState.randomIndex]

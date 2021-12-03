@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .inspiration-image-wrapper {
   margin: 45px auto;
   display: flex;

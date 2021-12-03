@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BearLogo } from '../../components/header/bearlogo';
+import { Spinner } from '../../components/spinner';
 import CanvasDraw from 'react-canvas-draw';
 import { BrushOptions, EraserOptions, PromptOptions } from './drawing-options';
 import './styles.css';
@@ -10,7 +11,8 @@ export default class Sketchbook extends React.Component {
     super(props);
     this.state = {
       pen: { brushRadius: 1, color: '#000000' },
-      prompts: []
+      prompts: [],
+      loading: true
     };
     this.handleUpdateBrush = this.handleUpdateBrush.bind(this);
     this.handleUpdateEraser = this.handleUpdateEraser.bind(this);
@@ -22,7 +24,8 @@ export default class Sketchbook extends React.Component {
       .then(res => res.json())
       .then(data => {
         this.setState({
-          prompts: data
+          prompts: data,
+          loading: false
         });
 
         this.setState(prevState => ({
@@ -59,6 +62,7 @@ export default class Sketchbook extends React.Component {
 
   render() {
     const { pen, randomIndex, prompts } = this.state;
+    if (this.state.loading) return <Spinner />;
     return (
       <div className="sketchbook-content">
         <header className="sketchbook-header">

@@ -4,23 +4,17 @@ const db = require('./db');
 const errorMiddleware = require('./error-middleware');
 const staticMiddleware = require('./static-middleware');
 const path = require('path');
+const ClientError = require('./client-error');
 
 const app = express();
+
 app.use((req, res, next) => {
   // eslint-disable-next-line no-console
   console.log(req.path);
   next();
 });
+
 app.use(staticMiddleware);
-app.get('/api/bearPhotos', (req, res, next) => {
-  const sql = `
-    select "imageUrl"
-      from "bearPhotos"
-  `;
-  db.query(sql)
-    .then(result => res.json(result.rows))
-    .catch(err => next(err));
-});
 
 app.get('/api/bearPrompts', (req, res, next) => {
   const sql = `
@@ -28,9 +22,17 @@ app.get('/api/bearPrompts', (req, res, next) => {
       from "bearPrompts"
   `;
   db.query(sql)
-    .then(result => res.json(result.rows))
+    .then(result => {
+      const prompt = result.rows;
+      if (!prompt || prompt.length === 0) {
+        throw new ClientError(404, 'cannot find bear prompt');
+      } else {
+        res.json(prompt);
+      }
+    })
     .catch(err => next(err));
 });
+
 app.get('*', (req, res) => {
   const pathToIndex = path.join(__dirname, 'public', 'index.html');
   res.sendFile(pathToIndex);
@@ -38,8 +40,6 @@ app.get('*', (req, res) => {
 
 app.use((req, res) => {
   res.sendFile('/index.html', {
-    // you'll need to require the built-in path module
-    // into your server code if you haven't already
     root: path.join(__dirname, 'public')
   });
 });

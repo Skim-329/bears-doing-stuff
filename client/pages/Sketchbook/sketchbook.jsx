@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BearLogo } from '../../components/header/bearlogo';
+import { Spinner } from '../../components/spinner';
 import CanvasDraw from 'react-canvas-draw';
 import { BrushOptions, EraserOptions, PromptOptions } from './drawing-options';
 import './styles.css';
@@ -10,7 +11,8 @@ export default class Sketchbook extends React.Component {
     super(props);
     this.state = {
       pen: { brushRadius: 1, color: '#000000' },
-      prompts: []
+      prompts: [],
+      loading: true
     };
     this.handleUpdateBrush = this.handleUpdateBrush.bind(this);
     this.handleUpdateEraser = this.handleUpdateEraser.bind(this);
@@ -26,7 +28,8 @@ export default class Sketchbook extends React.Component {
         });
 
         this.setState(prevState => ({
-          randomIndex: Math.floor(Math.random() * prevState.prompts.length)
+          randomIndex: Math.floor(Math.random() * prevState.prompts.length),
+          loading: false
         }));
       });
   }
@@ -66,9 +69,7 @@ export default class Sketchbook extends React.Component {
             <BearLogo />
           </NavLink>
           <h1>
-            {prompts[randomIndex] === undefined
-              ? ''
-              : prompts[randomIndex].prompt}
+            {this.state.loading ? <Spinner /> : prompts[randomIndex].prompt}
           </h1>
         </header>
         <div>

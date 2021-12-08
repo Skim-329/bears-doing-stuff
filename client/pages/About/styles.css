@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .about-page-group {
@@ -17,8 +17,8 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 6.25rem;
+  margin-right: 6.25rem;
 }
 
 .about-page-description {
@@ -26,14 +26,14 @@
   font-size: 2rem;
   font-weight: lighter;
   color: #6c6c6c;
-  padding-right: 50px;
+  padding-right: 3.125rem;
   width: 66%;
 }
 
 .about-page-photo {
   height: 25rem;
   width: 25rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.4rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -48,8 +48,8 @@
     width: 90%;
     height: 90%;
     display: block;
-    margin-top: 40px;
-    margin-bottom: 60px;
+    margin-top: 2.8rem;
+    margin-bottom: 4rem;
     margin-left: auto;
   }
 }

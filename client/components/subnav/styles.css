@@ -1,7 +1,5 @@
 .subnav {
   width: 100vw;
-  top: 0;
-  left: 0;
   height: 100px;
   background-color: white;
   display: flex;
@@ -12,17 +10,17 @@
 .subnav-group {
   display: flex;
   flex-direction: row;
-  margin-top: 15px;
-  margin-left: 45px;
-  margin-right: 45px;
+  margin-top: 1rem;
+  margin-left: 2.8rem;
+  margin-right: 2.8rem;
 }
 
 .subnav-group-links {
   display: flex;
   flex-direction: row;
-  margin-top: 25px;
-  margin-left: 45px;
-  margin-right: 45px;
+  margin-top: 1.5rem;
+  margin-left: 2.8rem;
+  margin-right: 2.8rem;
 }
 
 .subnav-group-button {
@@ -36,8 +34,7 @@
   border: 2px solid #ad2424;
   background-color: white;
   border-radius: 25px;
-  font-family: "Zilla Slab", serif;
-  font-size: 150%;
+  font-size: 1.5rem;
 }
 
 .subnav-group-button:hover {
@@ -45,11 +42,11 @@
 }
 
 .subnav-group-item {
-  padding-right: 29px;
-  padding-top: 50px;
+  padding-right: 1.9rem;
+  padding-top: 3rem;
   font-weight: lighter;
   color: #ad2424;
-  font-size: 150%;
+  font-size: 1.5rem;
 }
 
 .subnav-group-item:hover {
@@ -68,12 +65,12 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .subnav-group-links {
-    font-size: 0.75rem;
+  .subnav-group-item {
+    font-size: 1rem;
   }
 
   .subnav-group-button {
-    font-size: 1.1rem;
+    font-size: 1rem;
     height: 40px;
     width: 150px;
   }

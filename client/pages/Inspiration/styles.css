@@ -51,7 +51,7 @@
 
 @media only screen and (max-width: 768px) {
   .inspiration-image-wrapper {
-    margin: 45px auto;
+    margin: 3rem auto;
     max-height: 70%;
     max-width: 70%;
     display: flex;

@@ -1,7 +1,7 @@
 .sketchbook-header {
   display: flex;
-  padding-top: 15px;
-  padding-left: 15px;
+  padding-top: 1rem;
+  padding-left: 1rem;
   background-color: white;
   position: relative;
   z-index: 1000;
@@ -21,11 +21,11 @@
 h1 {
   font-family: "Zilla Slab", serif;
   color: #ad2424;
-  margin-left: 30px;
+  margin-left: 1.85rem;
 }
 
 .sketchbook-sidebar {
-  width: 60px;
+  width: 3.75rem;
   height: 100vh;
   background-color: #ad2424;
 }
@@ -40,7 +40,7 @@ h1 {
 
 .sketchbook-pen {
   color: white;
-  padding: 10px;
+  padding: 0.7rem;
 }
 
 .sketchbook-pen:hover {
@@ -50,7 +50,7 @@ h1 {
 
 .sketchbook-eraser {
   color: white;
-  padding: 10px;
+  padding: 0.7rem;
 }
 
 .sketchbook-eraser:hover {
@@ -60,7 +60,7 @@ h1 {
 
 .sketchbook-prompt {
   color: white;
-  padding: 10px;
+  padding: 0.7rem;
 }
 
 .sketchbook-prompt:hover {
@@ -71,7 +71,7 @@ h1 {
 .drawer {
   background-color: #d99d9d;
   border-radius: 0%;
-  padding-left: 10px;
+  padding-left: 0.75rem;
   font-family: "Zilla Slab", serif;
   font-weight: 800;
 }
@@ -93,11 +93,11 @@ h1 {
 }
 
 #sketchbook-text-area {
-  width: 200px;
-  height: 50px;
+  width: 12.5rem;
+  height: 4rem;
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: 6rem;
+  left: 6rem;
   z-index: 1;
   resize: horizontal;
 }
@@ -109,7 +109,7 @@ h1 {
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin-left: 100px;
+    margin-left: 6.25rem;
   }
 }
 
@@ -120,6 +120,6 @@ h1 {
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin-left: 100px;
+    margin-left: 6.25rem;
   }
 }
